@@ -1,0 +1,56 @@
+{
+  "name": "water-abstraction-ava-spike",
+  "version": "0.1.0",
+  "description": "Spike to investigate switching to the AVA testing framework",
+  "homepage": "https://github.com/DEFRA/water-abstraction-team",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "bin/build",
+    "migrate:make": "knex migrate:make --",
+    "migrate:db": "knex migrate:latest",
+    "migrate:db:test": "NODE_ENV=test knex migrate:latest",
+    "rollback:db": "knex migrate:rollback --all",
+    "rollback:db:test": "NODE_ENV=test knex migrate:rollback --all",
+    "lint": "standard",
+    "pretest": "NODE_ENV=test node ./test/support/setup.js",
+    "test": "c8 ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DEFRA/water-abstraction-system"
+  },
+  "author": "Water service team",
+  "license": "OGL-UK-3.0",
+  "type": "module",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@hapi/hapi": "^21.3.2",
+    "blipp": "^4.0.2",
+    "dotenv": "^16.3.1",
+    "hapi-pino": "^12.1.0",
+    "knex": "^2.5.1",
+    "objection": "^3.1.1",
+    "pg": "^8.11.2",
+    "pg-query-stream": "^4.5.2"
+  },
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "c8": "^8.0.1",
+    "pino-pretty": "^10.2.0",
+    "sinon": "^15.2.0",
+    "standard": "^17.1.0"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.test.js"
+    ]
+  },
+  "c8": {
+    "all": true,
+    "extension": ".js",
+    "reporter": ["lcovonly", "text"],
+    "src": ["app/", "config/"],
+    "skip-full": true
+  }
+}
