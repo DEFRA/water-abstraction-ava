@@ -4,10 +4,10 @@ import test from 'ava'
 // Test helpers
 import * as LineHelper from '../../support/returns/line.helper.js'
 import * as VersionHelper from '../../support/returns/version.helper.js'
-import VersionModel from '../../../app/model/returns/version.model.js'
+import VersionModel from '../../../app/models/returns/version.model.js'
 
 // Thing under test
-import LineModel from '../../../app/model/returns/line.model.js'
+import LineModel from '../../../app/models/returns/line.model.js'
 
 test.before('Setup test data', async (t) => {
   t.context.testVersion = await VersionHelper.add()

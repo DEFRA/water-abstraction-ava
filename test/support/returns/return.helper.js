@@ -3,7 +3,7 @@
  */
 
 import { generateUUID } from '../../../app/lib/general.lib.js'
-import ReturnModel from '../../../app/model/returns/return.model.js'
+import ReturnModel from '../../../app/models/returns/return.model.js'
 
 /**
  * Add a new return
