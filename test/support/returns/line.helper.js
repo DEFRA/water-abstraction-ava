@@ -3,7 +3,7 @@
  */
 
 import { generateUUID } from '../../../app/lib/general.lib.js'
-import LineModel from '../../../app/model/returns/line.model.js'
+import LineModel from '../../../app/models/returns/line.model.js'
 
 /**
  * Add a new line

@@ -5,7 +5,7 @@ import test from 'ava'
 import * as EventHelper from '../../support/water/event.helper.js'
 
 // Thing under test
-import EventModel from '../../../app/model/water/event.model.js'
+import EventModel from '../../../app/models/water/event.model.js'
 
 test.before('Setup test data', async (t) => {
   t.context.testRecord = await EventHelper.add()

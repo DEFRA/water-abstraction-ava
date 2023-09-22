@@ -2,7 +2,7 @@
  * @module EventHelper
  */
 
-import EventModel from '../../../app/model/water/event.model.js'
+import EventModel from '../../../app/models/water/event.model.js'
 import { timestampForPostgres } from '../../../app/lib/general.lib.js'
 
 /**

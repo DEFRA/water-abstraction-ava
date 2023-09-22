@@ -3,10 +3,10 @@ import test from 'ava'
 
 // Test helpers
 import { DBError } from 'objection'
-import EventModel from '../../app/model/water/event.model.js'
+import EventModel from '../../app/models/water/event.model.js'
 
 // Thing under test
-import LegacyBaseModel from '../../app/model/legacy-base.model.js'
+import LegacyBaseModel from '../../app/models/legacy-base.model.js'
 
 test('.schema > When the getter is not overridden it throws an error', (t) => {
   t.throws(() => NoSchemaModel.query(),

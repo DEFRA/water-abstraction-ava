@@ -4,7 +4,7 @@
 
 import { generateUUID } from '../../../app/lib/general.lib.js'
 import { generateReturnId } from './return.helper.js'
-import VersionModel from '../../../app/model/returns/version.model.js'
+import VersionModel from '../../../app/models/returns/version.model.js'
 
 /**
  * Add a new version

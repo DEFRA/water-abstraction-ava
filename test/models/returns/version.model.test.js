@@ -3,13 +3,13 @@ import test from 'ava'
 
 // Test helpers
 import * as LineHelper from '../../support/returns/line.helper.js'
-import LineModel from '../../../app/model/returns/line.model.js'
+import LineModel from '../../../app/models/returns/line.model.js'
 import * as ReturnHelper from '../../support/returns/return.helper.js'
-import ReturnModel from '../../../app/model/returns/return.model.js'
+import ReturnModel from '../../../app/models/returns/return.model.js'
 import * as VersionHelper from '../../support/returns/version.helper.js'
 
 // Thing under test
-import VersionModel from '../../../app/model/returns/version.model.js'
+import VersionModel from '../../../app/models/returns/version.model.js'
 
 test.before('Setup test data', async (t) => {
   t.context.testReturn = await ReturnHelper.add()
